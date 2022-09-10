@@ -1,53 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Nunito", sans-serif;
-  background : linear-gradient(90deg, #199465, #1e4d62);
+  background: linear-gradient(180deg, #199465, #1e4d62);
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 }
 
 #todo-form {
-    width: 400px;
-    background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 15px;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 400px;
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 15px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-input, button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 1px solid #199465;
+input,
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #199465;
 }
 
 button {
-    background-color: transparent;
-    border: 1px solid #1e4d62;
-    margin-left: 20px;
-    color: #199465;
-    cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #1e4d62;
+  margin-left: 20px;
+  color: #199465;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #199465;
-    color: #fff;
+  background-color: #199465;
+  color: #fff;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
+}
+
+.todo-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.todo-items {
+  font-size: 1.5rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
 }
