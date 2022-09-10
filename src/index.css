@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Nunito", sans-serif;
+  background : linear-gradient(90deg, #199465, #1e4d62);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo-form {
+    width: 400px;
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #199465;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #1e4d62;
+    margin-left: 20px;
+    color: #199465;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #199465;
+    color: #fff;
+}
+
+input:focus {
+    outline: none;
 }
