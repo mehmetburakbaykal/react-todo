@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const TodoForm = ({ setTodos, todos }) => {
   const [todoValue, setTodoValue] = useState("");
 
   const handleSubmit = (e) => {
-    setTodos([...todos, todoValue]);
+    if (todoValue === "") {
+      alert("Please enter a todo!");
+    } else if (todos.includes(todoValue)) {
+      alert("Todo already exist!");
+    } else if (todoValue.length < 3) {
+      alert("Todo must be at least 3 characters long!");
+    } else {
+      setTodos([...todos, todoValue]);
+    }
   };
 
   return (

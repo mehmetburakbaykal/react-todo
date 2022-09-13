@@ -3,12 +3,15 @@ import { useState } from "react";
 import TodoList from "./components/TodoList";
 
 function App() {
-  const [todos, setTodos] = useState(["Burak", "Nisa"]);
+  const [todos, setTodos] = useState([]);
 
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo, index) => index !== id));
+  };
   return (
     <>
       <TodoForm setTodos={setTodos} todos={todos} />
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} deleteTodo={deleteTodo}/>
     </>
   );
 }
